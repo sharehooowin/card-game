@@ -1,0 +1,33 @@
+/*样式重写*/
+@font-face{
+    font-family: 'Source Han Sans CN Medium';
+    src: url('../fonts/SourceHanSansCN-Medium.ttf');
+}
+*{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*chrome 和 safari（webkit内核）*/
+.scroll-box::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/*360、IE*/
+.scroll-box{
+    -ms-scroll-chaining: chained;
+    -ms-overflow-style: none;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+    -ms-overflow-style: none;
+}
+
+/*火狐下隐藏滚动条*/
+.scroll-box{
+    scrollbar-width: none;
+}
